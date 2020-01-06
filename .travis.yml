@@ -33,4 +33,4 @@ before_script:
 script:
   - phpcs --standard=WordPress ./**/*.php
   - phpunit
-  - cd tests/rspec && bundle exec rspec test.rb
+  - cd tests/rspec && bundle exec spec test.rb
