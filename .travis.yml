@@ -13,7 +13,7 @@ php:
   - 5.6
 
 env:
-  - WP_PROJECT_TYPE=plugin WP_VERSION=5.3.2 WP_MULTISITE=0 WP_TEST_URL=http://localhost:12000 WP_TEST_USER=test WP_TEST_USER_PASS=test
+  - WP_PROJECT_TYPE=plugin WP_VERSION=latest WP_MULTISITE=0 WP_TEST_URL=http://localhost:12000 WP_TEST_USER=test WP_TEST_USER_PASS=test
 
 matrix:
   allow_failures:
@@ -24,7 +24,7 @@ before_script:
   # - composer install
 
   - git clone https://github.com/Koodimonni/wordpress-test-template wp-tests
-  - bash wp-tests/bin/install-wp-tests.sh test root '' localhost 2.3.2
+  - bash wp-tests/bin/install-wp-tests.sh test root '' localhost $WP_VERSION
 
 script:
   - phpcs --standard=WordPress ./**/*.php
