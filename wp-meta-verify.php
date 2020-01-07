@@ -1,5 +1,4 @@
 <?php
-
 /*
 Plugin Name: WP Meta Verify
 Plugin URI: https://w3guy.com
