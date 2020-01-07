@@ -27,5 +27,6 @@ before_script:
 
 script:
 #  - cd wp-tests/spec && bundle exec rspec test.rb
-  - wget https://phar.phpunit.de/phpunit-nightly.phar
-  - php phpunit-nightly.phar --7.5.9
+#  - wget https://phar.phpunit.de/phpunit-nightly.phar
+#  - php phpunit-nightly.phar --7.5.9
+  - phpunit
