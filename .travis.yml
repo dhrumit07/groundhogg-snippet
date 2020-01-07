@@ -24,9 +24,11 @@ matrix:
 before_script:
   - git clone https://github.com/Seravo/wordpress-test-template wp-tests
   - bash wp-tests/bin/install-wp-tests.sh test root '' localhost $WP_VERSION
+  - composer install
 
 script:
 #  - cd wp-tests/spec && bundle exec rspec test.rb
-  - wget https://phar.phpunit.de/phpunit-nightly.phar
-  - php phpunit-nightly.phar
+#  - wget https://phar.phpunit.de/phpunit-nightly.phar
+#  - php phpunit-nightly.phar
 #  - phpunit
+  - vendor/bin/phpunit
