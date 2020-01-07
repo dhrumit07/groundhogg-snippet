@@ -27,5 +27,4 @@ before_script:
 
 script:
 #  - cd wp-tests/spec && bundle exec rspec test.rb
-  - phpunit
-    -7.0
+  - phpunit-7.5.9
