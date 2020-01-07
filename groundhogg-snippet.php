@@ -20,6 +20,8 @@
  * GNU General Public License for more details.
  */
 
+wp_die();
+
 use function Groundhogg\get_contactdata;
 
 /**
